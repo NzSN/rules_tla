@@ -62,7 +62,7 @@ tlc_test = rule(
   implementation = _tlc_impl,
   attrs = {
     "module" : attr.label(allow_files = False),
-    "cfg" : attr.label(single_file = True, allow_files = True),
+    "cfg" : attr.label(allow_files = True),
     "deps" : attr.label_list(allow_files = False),
     "workers" : attr.int(default = 1),
     "deadlock" : attr.bool(default = False),
